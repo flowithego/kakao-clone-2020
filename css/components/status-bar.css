@@ -1,8 +1,11 @@
 .status-bar {
+  position: fixed;
+  top: 0;
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
   justify-content: center;
   /* space-between을 써도 된다. 아래에서 width만 설정해준다면. */
-
   padding: 5px 3px;
 }
 

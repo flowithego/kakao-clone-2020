@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>Login | KakaoClone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -33,13 +33,13 @@
       </p>
     </header>
 
-    <form class="login-form" action="friends-list.html" method="get">
-      <input class="login-form__input" required name="username" type="text" placeholder="Email or phone number" />
-      <input class="login-form__input" required name="password" type="password" placeholder="Password" />
-      <input class="login-form__btn" name="submit" type="submit" value="Log In" />
-      <input class="login-form__btn" name="submit" type="submit" value="Sign Up" />
+    <form class="login-form" action="friends.html" method="GET">
+      <input required class="login-form__input" name="username" type="text" placeholder="Email or phone number" autocomplete="off" />
+      <input required class="login-form__input" name="password" type="password" placeholder="Password" autocomplete="off" />
+      <input class="login-form__btn login-form__btn--hover" name="submit" type="submit" value="Log In" />
+      <input class="login-form__btn login-form__btn--hover" name="submit" type="submit" value="Sign Up" />
       <a class="login-form__a" href="#">Find Kakao Account or Password</a>
-    </form>
+		</form>
 
     <script
       src="https://kit.fontawesome.com/df8f48d4e8.js"
