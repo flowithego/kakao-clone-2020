@@ -1,0 +1,31 @@
+.status-bar {
+  display: flex;
+  justify-content: center;
+  /* space-between을 써도 된다. 아래에서 width만 설정해준다면. */
+
+  padding: 5px 3px;
+}
+
+.status-bar__column {
+  width: 33.3%;
+}
+
+.status-bar__column:first-child span {
+  /* 첫째는 flex-start 를 설정해줄 필요가 없었다. */
+  margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+}
