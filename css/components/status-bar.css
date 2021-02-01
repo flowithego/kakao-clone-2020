@@ -1,6 +1,8 @@
 .status-bar {
+  z-index: 2;
   position: fixed;
   top: 0;
+  background-color: #ffffff;
   display: flex;
   width: 100%;
   box-sizing: border-box;

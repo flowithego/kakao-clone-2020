@@ -1,5 +1,8 @@
 .user-component {
   justify-content: space-between;
+  padding-top: 15px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .user-component,

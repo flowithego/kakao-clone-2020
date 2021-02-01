@@ -1,0 +1,45 @@
+#settings-screen {
+  background-color: #ffffff;
+}
+
+#settings-screen .alt-header,
+#settings-screen .status-bar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  /* timespamp가 스크롤 되어서 올라올때 안보이게 하기 위해서 백그라운드 컬러를 설정해준다. */
+  background-color: #ffffff;
+}
+
+#settings-screen .status-bar {
+  z-index: 2;
+}
+
+#settings-screen .alt-header {
+  z-index: 1;
+  /* top: 10px; */
+}
+
+.settings-list {
+  padding-top: 30px;
+}
+
+.settings__setting {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings__setting i {
+  opacity: 0.9;
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.settings__setting-column:last-child {
+  opacity: 0.5;
+}

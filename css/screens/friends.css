@@ -4,10 +4,10 @@
   align-items: center;
   text-align: center;
   background-color: #fafafa;
-  padding: 15px 0px;
+  padding: 15px 0;
   font-size: 16px;
-  margin-bottom: 15px;
-  margin-top: -15px;
+  margin-top: 106px;  /*-15px;*/
+  /* top: 106px; */
 }
 
 #friends-display-link i {
@@ -24,14 +24,43 @@
 }
 
 .friends-screen__channel {
-  margin-top: 25px;
-  border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  border-top: var(--main-border);
   padding-top: 12px;
 }
 
 .friends-screen__channel-header {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    /* display: none은 마우스를 클릭할수 없으나
+    아래와 같이하면 마우스 클릭이 걸리지 않게 할수 있다.
+    사실 이와 같은 숨김 기능은 JS로만 해주어야한다. 이 수업에서는
+    간략하게 CSS적 기능으로만 구현해보는 취지이다. */
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  z-index: 3;
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  animation: hideSplashScreen 0.7s ease-in-out forwards;
+  animation-delay: 1.2s;
 }

@@ -1,0 +1,195 @@
+#chat-screen {
+    background-color: #abc1d1;
+    height: 500vh;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    /* timespamp가 스크롤 되어서 올라올때 안보이게 하기 위해서 백그라운드 컬러를 설정해준다. */
+    background-color: #abc1d1;
+}
+
+#chat-screen .status-bar {
+    z-index: 2;
+}
+
+#chat-screen .alt-header {
+    z-index: 1;
+    /* top: 10px; */
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.main-chat {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s linear;
+}
+
+.chat-screen__timestamp {
+    background-color: #92a4b2;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin: 25px 0;
+}
+
+.message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.message-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 45%;
+    margin-right: 10px;
+}
+
+.message__author {
+    margin-top: 3px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.message__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message__bubble {
+    background-color: #ffffff;
+    padding: 13px;
+    border-radius: 0 15px 15px 15px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.message__author,
+.message__time {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.message-row--own {
+    justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+    background-color: var(--yellow);
+    border-radius: 15px 0 15px 15px;
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.message-row--own .message__info {
+    flex-direction: row-reverse;
+    /* 또는 order 프로퍼티를 사용하여 순서를 바꿀 수 있다. 
+    상위 요소가 display: flex; 로 설정되어 있어야 가능하다. */
+}
+
+.reply {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 5px 25px;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.reply .reply__column:first-child {
+    width: 10%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.reply .reply__column:last-child {
+    width: 90%;
+    position: relative;
+}
+
+.reply i {
+    opacity: 0.5;
+}
+
+.reply input {
+    padding: 10px;
+    width: 90%;
+    border: var(--main-border);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+    position: absolute;
+    right: 35px;
+    top: 4px;
+}
+
+.reply__column:last-child > i {
+    right: 80px;
+    top: 12px;
+}
+
+.reply__column button {
+    background-color: var(--yellow);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.reply__column button i {
+    opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+    outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+    transition: opacity 0.3 ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+    opacity: 0;
+}
+
+.reply:focus-within input {
+    width: 90vw;
+    transform: translateX(-11%) translateY(-80px);
+}
+
+.reply:focus-within,
+.reply:focus-within button {
+    transform: translateY(80px);
+    opacity: 1;
+}
