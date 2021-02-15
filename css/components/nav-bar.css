@@ -2,7 +2,12 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #f9f9fa;
+  background-color: #white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.6)
+  );
   padding: 20px 50px;
   box-sizing: border-box;
   border-top: var(--main-border);
@@ -59,6 +64,12 @@
 }
 .nav__btn:last-child {
     animation-delay: 0.9s;
+}
+
+.nav i {
+  background: linear-gradient(to right top, #65dfc9, #658ec6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 

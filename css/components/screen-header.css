@@ -4,6 +4,11 @@
     width: 100%;
     box-sizing: border-box;
     background-color: #ffffff;
+    background: linear-gradient(      /*    */
+    to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
     z-index: 1;
     display: flex;
     padding: var(--horizontal-space);
@@ -15,6 +20,9 @@
 .screen-header__title {
     font-size: 30px;
     font-weight: 600;
+    background: linear-gradient(to right top, #65dfc9, #658ec6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .screen-header__icons span {

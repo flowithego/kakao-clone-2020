@@ -1,4 +1,5 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 @import "variables.css";
 
 /* Components */
@@ -21,12 +22,19 @@
 @import "./screens/chat-screen.css";
 
 
-
+html {
+  background: linear-gradient(to right bottom, #65dfc9, #6cdbeb);
+}
 
 body {
-  color: #2e363e;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #426696;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  opacity: 0.9;
+  font-family: "Poppins", sans-serif;
 }
 
 .main-screen {

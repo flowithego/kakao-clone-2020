@@ -10,7 +10,7 @@
     width: 100%;
     box-sizing: border-box;
     /* timespamp가 스크롤 되어서 올라올때 안보이게 하기 위해서 백그라운드 컬러를 설정해준다. */
-    background-color: #abc1d1;
+    background-color: rgb(235, 249, 248);
 }
 
 #chat-screen .status-bar {
@@ -93,7 +93,7 @@
 }
 
 .message-row--own .message__bubble {
-    background-color: var(--yellow);
+    background-color: #65dfc9;
     border-radius: 15px 0 15px 15px;
     margin-right: 0;
     margin-left: 5px;
@@ -155,7 +155,7 @@
 }
 
 .reply__column button {
-    background-color: var(--yellow);
+    background-color: #65dfc9;
     border: none;
     width: 30px;
     height: 30px;

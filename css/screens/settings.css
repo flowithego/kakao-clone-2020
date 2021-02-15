@@ -1,5 +1,11 @@
 #settings-screen {
   background-color: #ffffff;
+  color: #426696;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
 }
 
 #settings-screen .alt-header,
@@ -10,6 +16,11 @@
   box-sizing: border-box;
   /* timespamp가 스크롤 되어서 올라올때 안보이게 하기 위해서 백그라운드 컬러를 설정해준다. */
   background-color: #ffffff;
+  background: linear-gradient(      /*    */
+    to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
 }
 
 #settings-screen .status-bar {
